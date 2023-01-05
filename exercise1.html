@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About me</title>
+    <style>
+        .pic {
+            height: 300px;
+            width: 460px;
+            border: 5px solid white;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(119, 93, 74)">
+
+    <!-- <div class="text" style="color:white;"> -->
+    <div class="title" style="color:white;">
+        <h1>About Me</h1>
+    </div>
+    <div class="pic">
+        <img src="images/me picture.jpg" alt="A pic of me :)" height="300" width="460">
+    </div>
+    <div class="text">
+        <div class="text1" style="color:white;">
+            <h3>Michelle Claire Anwen</h3>
+        </div>
+        <div class="text1" style="color:white;">
+            <p>Hi! I'm Michelle, I am<br></p>
+        </div>
+        <div class="text1" style="color:white;">
+            <p>
+            <div class="number">
+                <h3>18</h3>
+            </div> years old, and i am currently taking the course of Digital Design and
+            Development in RP.<br></p>
+        </div>
+        <div class="text1" style="color:white;">
+            <p> I like to dance, swim
+                or play the piano during my free time.</p>
+        </div>
+    </div>
+
+    <div align="center">
+        <a style="color:white;" href="favouriteFood.html">My favourite food! ></a>
+    </div>
+
+    <!-- </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        anime({
+            targets: ".title",
+            translateX: 560,
+            // translateY: 30,
+            duration: 3000
+        });
+
+        anime({
+            targets: '.pic',
+            translateX: 400,
+            // translateY: 30,
+            rotate: {
+                value: 360,
+                duration: 1800,
+                easing: 'easeInOutSine'
+            },
+            duration: 3000
+        });
+
+        anime({
+            targets: '.text .text1',
+            translateX: 400,
+            delay: anime.stagger(100),
+            // direction: 'alternate'
+
+        });
+
+        anime({
+            targets: '.number',
+            innerHTML: [0, 18], //start and end values
+            easing: 'linear',
+            round: 1, //rounds off to zero decimal places
+            duration: 2000
+        });
+    </script>
+</body>
+
+</html>
